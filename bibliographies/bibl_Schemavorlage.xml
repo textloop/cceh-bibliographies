@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../common/cceh-bibliographies.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../common/cceh-bibliographies.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title><!-- Projektbibliografie --></title>
+         </titleStmt>
+         <publicationStmt>
+            <p><!--Publication Information--></p>
+         </publicationStmt>
+         <sourceDesc>
+            <p><!-- Information about the source --></p>
+         </sourceDesc>
+      </fileDesc>
+  </teiHeader>
+  <text>
+      <body>
+         <listBibl>
+            <!-- Schema für bestimmten Typen:
+              <element>
+                  <name>biblStruct</name>
+                  <attribute><name>type</name><value>book</value></attribute>
+                  <ref name="tei_...">
+              </element>
+            -->
+            <biblStruct type="book" status="published" xml:id="papyri00001">
+               <!-- @status: published | unpublished; default: published -->
+            	<!-- @xml:id: Pflicht; Format: xxxxxx00000 [x = Buchstabe, 0 = Ziffer, bei Buchstaben wird hinten aufgefüllt, bei Ziffern vorne]  -->
+               <!-- muss immer monogr haben, hat kein analytic -->
+               <monogr>
+                  <title level="m" type="main" xml:lang="de">Der Psalmenkommentar von Tura Quaternio IX</title>
+                  <!-- @type: main | sub; default: main 
+                     - title kann mehrfach vorkommen
+                     - Formatierungen im Titel mit <hi rend="italics|bold">
+                     - mindestens ein Main-Title
+                     - optional mit @xml:lang
+                  -->
+                  <idno type="ISBN">978-3-506-71431-2</idno>
+                  <!-- idno type short_title: obligatorisch; die anderen optional; idno kann also mehrfach vorkommen, @type dabei immer obligatorisch
+                     - short_title: max 60 Zeichen
+                     @type z.B. ISBN, ISSN, DOI, short_title, URL -->
+                  <editor><!-- oder author -->
+                     <persName><!-- neben persName immer auch orgName erlauben/anbieten? -->
+                        <forename>Aloys</forename><!-- kann mehrfach vorkommen -->
+                        <surname>Kehl</surname><!-- kann mehrfach vorkommen -->
+                     </persName>
+                     <note type="role">herausgegeben, übersetzt und erläutert von</note>
+                     <!-- diese note ist optional (wenn, dann immer mit @role); die note kann ebenso in <author> vorkommen -->
+                  </editor>
+                  <textLang mainLang="de" otherLangs="fr en" /><!-- optional, wenn dann immer mit @mainLang, optional Angabe von @otherlangs; 
+                  in Ausgangstemplate aufnehmen
+                  vorgegebene Liste von Sprachkürzeln -->
+                  <edition n="1"><!-- Informationen zur Ausgabe und Auflage (Freitext) --></edition><!-- @n obligatorisch, edition kommt immer vor, default n="1" -->
+                  <imprint>
+                     <pubPlace>Köln</pubPlace><!-- obligatorisch, freier Text, wiederholbar -->
+                     <pubPlace xml:lang="en">Cologne</pubPlace><!-- pubPlace optional mit @xml:lang -->
+                     <pubPlace>Opladen</pubPlace>
+                     <publisher>Westdeutscher Verlag</publisher><!-- obligatorisch, freier Text, kann leer bleiben -->
+                     <date when="1964">1964</date><!-- obligatorisch, @when Pflicht, Jahreszahl -->
+                     <note type="reprint">korrigierter Nachdruck 1987 | Nachdruck zum Erstdruck von ... </note>
+                     <!-- optional, wenn dann mit @type=reprint, freier Text, erläutern!, wenn keine Infos, dann frei lassen -->
+                  </imprint>
+               </monogr>
+               <!-- Zugehörigkeit zu einer Reihe bei unserem type "book" optional -->
+               <series>
+                  <title level="s" type="main">Pap. Colon. Theol.</title>
+                  <biblScope type="vol">1</biblScope>
+               </series>
+               <series>
+                  <title level="s" type="main">Papyrologica Coloniensia</title><!-- wenn series, dann title Pflicht -->
+                  <biblScope type="vol">I</biblScope><!-- wenn series, dann biblScope Pflicht (type="vol" oder type="part") -->
+               </series>
+               <!-- ##### relatedItems #####
+               bei allen Typen möglich
+               -->
+               <relatedItem type="translationOf" target="#papyri00002"></relatedItem>
+               <!-- @target: Verweis auf die ID des anderen Eintrags
+                    @type: Art der Relation, mögliche Werte: translationOf | reviewOf | reprintOf | partOf 
+                    es kann mehrere relatedItems geben
+                    jeder Typ aber nur jeweils einmal
+               -->
+               
+               <!-- ##### Bereich für zusätzliche Anmerkungen ##### 
+                  erstmal:
+                  - alle optional
+                  - Reihenfolge egal
+                  - bei allen Typen gleichermaßen möglich
+               -->
+               <note type="rel_text"></note><!-- 
+                  die Beziehung des bibliografischen Items zu einem Primärtext
+                  Vorschläge: Edition|Übersetzung|Kommentar oder Freitext
+                  <rng:choice>
+                     <rng:choice>
+                        <rng:value></rng:value>
+                        ...
+                     </rng:choice>
+                     <rng:text />
+                  </rng:choice>
+               -->
+               <note type="tags"></note>
+               <!-- Schlagwörter, à la DARE; kann einmal vorkommen; kommaseparierte Liste -->
+               <note type="item" subtype="signature" target="http://www.ub.uni-koeln.de/usbportal?query=inst432:10111">B4/2006/Ur</note>
+               <!--
+               - @subtype: signature | digitized_version
+               - @target: URL zum Katalogeintrag oder Digitalisat
+               - Inhalt in Note erlaubt (z.B. Signatur, also freier Text)
+               - das Element kann mehrfach vorkommen. Muss aber nicht vorkommen. Meint: ein Exemplar (in einer Bibliothek oder digital) des hier bibliografierten Werks
+               -->
+               <note type="abstract"><p></p></note>
+               <!-- 
+                  - kann einmal vorkommen, muss nicht
+                  - durch <p>-Elemente strukturiert -->
+               <note type="notes"><p>bla bla bla</p></note>
+               <!-- allgemeine Anmerkungen
+                  - durch <p>-Elemente strukturiert
+                  - kann einmal vorkommen
+               -->
+            </biblStruct>
+            <biblStruct type="journalArticle" status="published" xml:id="kapxxx00001">
+               <!-- muss immer analytic haben, und monogr -->
+               <analytic>
+                  <title level="a" type="main">Paläographische Fragen deutscher Denkmäler der Karolingerzeit</title><!-- siehe oben 
+                  = Titel des Aufsatzes -->
+                  <idno type="DOI">10.1515/9783110242058.101</idno><!-- siehe oben -->
+                  <author>
+                     <persName>
+                        <forename>Bernhard</forename>
+                        <surname>Bischoff</surname>
+                     </persName>
+                  </author>
+                  <textLang mainLang="de" />
+               </analytic>
+               <monogr>
+                  <title level="j" type="main"><!-- bei journalArticle hier level="j" statt "m" (book)
+                  = Titel der Zeitschrift -->
+                     Frühmittelalterliche Studien (FMSt)
+                     <!-- UH: wollen wir diese Komplexität im Titel zulassen (Abkürzung / Auflösung)? -->
+                  </title>
+                  <idno type="ISSN">1613-0812 (Online)</idno><!-- optional -->
+                  <idno type="ISSN">0071-9706 (Print)</idno>
+                  <imprint>
+                     <!-- dies sind die biblScopes, die in journalArticle gebraucht werden (nur diese) -->
+                     <biblScope type="vol">5</biblScope><!-- Band -->
+                     <biblScope unit="issue"/><!-- Nr -->
+                     <biblScope type="pp">101-134</biblScope>
+                     <date when="1971">1971</date>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <biblStruct type="bookSection" status="published" xml:id="kapxxx00002">
+               <analytic><!-- der analytic-Teil ist genauso aufgebaut wie derjenige von journalArticle -->
+                  <title level="a" type="main">“For it is Written in the Law”: Ansegis and the Writing of
+                     Carolingian Royal Authority</title>
+                  <author>
+                     <persName>
+                        <forename>Stuart</forename>
+                        <surname>Airlie</surname>
+                     </persName>
+                  </author>
+                  <textLang mainLang="en" />
+               </analytic>
+               <monogr><!-- der monogr-Teil ist genauso aufgebaut wie derjenige von book -->
+                  <title level="m" type="main">Early Medieval Studies in Memory of Patrick Wormald</title>
+                  <editor>
+                     <persName>
+                        <forename>S.</forename>
+                        <surname>Baxter</surname>
+                     </persName>
+                  </editor>
+                  <editor>
+                     <persName>
+                        <forename>Catherine</forename>
+                        <surname>Karkov</surname>
+                     </persName>
+                  </editor>
+                  <editor>
+                     <persName>
+                        <forename>Janet L.</forename>
+                        <surname>Nelson</surname>
+                     </persName>
+                  </editor>
+                  <editor>
+                     <persName>
+                        <forename>David</forename>
+                        <surname>Pelteret</surname>
+                     </persName>
+                  </editor>
+                  <imprint>
+                     <pubPlace>Aldershot</pubPlace>
+                     <!-- diese biblScopes sind besonders für bookSection: pp, chap -->
+                     <biblScope type="pp">219-235</biblScope>
+                     <biblScope type="chap"></biblScope>
+                     <publisher>Ashgate</publisher>
+                     <date when="2009">2009</date>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+         	<biblStruct type="webPublication" status="published" xml:id="xxxxxx00000">
+               <analytic><!-- analytic-Bereich bei diesem Typ optional, wenn, dann analog zum analytic-Teil von journalArticle & bookSection, BIS AUF:
+                  <date type="posting">
+               -->
+                  <title level="a" type="main">MLA Works Cited: Electronic Sources (Web Publications)</title>
+                  <idno type="short_title"></idno>
+                  <idno type="URL">https://owl.english.purdue.edu/owl/resource/747/08/</idno>
+                  <author>
+                     <persName>
+                        <forename>Tony</forename>
+                        <surname>Russell</surname>
+                     </persName>
+                  </author>
+                  <author>
+                     <persName>
+                        <forename>Allen</forename>
+                        <surname>Brizee</surname>
+                     </persName>
+                  </author>
+                  <author>
+                     <persName>
+                        <forename>Elizabeth</forename>
+                        <surname>Angeli</surname>
+                     </persName>
+                  </author>
+                  <author>
+                     <persName>
+                        <forename>Russell</forename>
+                        <surname>Keck</surname>
+                     </persName>
+                  </author>
+                  <author>
+                     <persName>
+                        <forename>Joshua</forename>
+                        <forename>M.</forename>
+                        <surname>Pais</surname>
+                     </persName>
+                  </author>
+                  <author>
+                     <orgName>Purdue OWL Staff</orgName>
+                  </author>
+                  <textLang mainLang="en" />
+                  <date type="posting"></date><!-- optional; wenn auf der Seite ein Erstellungsdatum steht -->
+               </analytic>
+               <monogr><!-- monogr muss hier immer vorkommen; Aufbau analog zu monogr in Typ book oder bookSection; AUSSER: idno -> URL & date -> access -->
+                  <title level="m" type="main">The Purdue Online Writing Lab (OWL)</title>
+                  <idno type="URL">https://owl.english.purdue.edu/</idno><!-- hier Pflicht -->
+                  <edition n="1.1"><!-- version, revision --></edition><!-- editon optional, wenn da, dann: optional freier Text mit Versions-/Revisionsinformationen, @n Pflicht -->
+                  <imprint>
+                     <date when="2014">2014</date>
+                     <date type="access"></date><!-- obligatorisch; meint das Datum des letzten Zugriffs auf die Webressource, die hier beschrieben wird -->
+                  </imprint>
+               </monogr>
+            </biblStruct>
+         </listBibl>
+      </body>
+  </text>
+</TEI>
