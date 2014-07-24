@@ -5,7 +5,7 @@
   <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title><!-- Projektbibliografie --></title>
+            <title level="overall" type="main"><!-- Projektbibliografie --></title>
          </titleStmt>
          <publicationStmt>
             <p><!--Publication Information--></p>
@@ -25,42 +25,31 @@
                   <ref name="tei_...">
               </element>
             -->
-            <biblStruct type="book" status="published" xml:id="papyri00001">
-               <!-- @status: published | unpublished; default: published -->
-            	<!-- @xml:id: Pflicht; Format: xxxxxx00000 [x = Buchstabe, 0 = Ziffer, bei Buchstaben wird hinten aufgefüllt, bei Ziffern vorne]  -->
-               <!-- muss immer monogr haben, hat kein analytic -->
+         	<!-- wohin übergreifende Prüfung value darf nie leer sein? -->
+         	<biblStruct type="book" status="published" xml:id="papyri00001">
                <monogr>
-                  <title level="m" type="main" xml:lang="de">Der Psalmenkommentar von Tura Quaternio IX</title>
-                  <!-- @type: main | sub; default: main 
-                     - title kann mehrfach vorkommen
-                     - Formatierungen im Titel mit <hi rend="italics|bold">
-                     - mindestens ein Main-Title
-                     - optional mit @xml:lang
-                  -->
-                  <idno type="ISBN">978-3-506-71431-2</idno>
-                  <!-- idno type short_title: obligatorisch; die anderen optional; idno kann also mehrfach vorkommen, @type dabei immer obligatorisch
-                     - short_title: max 60 Zeichen
-                     @type z.B. ISBN, ISSN, DOI, short_title, URL -->
-                  <editor><!-- oder author -->
-                     <persName><!-- neben persName immer auch orgName erlauben/anbieten? -->
-                        <forename>Aloys</forename><!-- kann mehrfach vorkommen -->
-                        <surname>Kehl</surname><!-- kann mehrfach vorkommen -->
-                     </persName>
-                     <note type="role">herausgegeben, übersetzt und erläutert von</note>
-                     <!-- diese note ist optional (wenn, dann immer mit @role); die note kann ebenso in <author> vorkommen -->
-                  </editor>
-                  <textLang mainLang="de" otherLangs="fr en" /><!-- optional, wenn dann immer mit @mainLang, optional Angabe von @otherlangs; 
-                  in Ausgangstemplate aufnehmen
-                  vorgegebene Liste von Sprachkürzeln -->
-                  <edition n="1"><!-- Informationen zur Ausgabe und Auflage (Freitext) --></edition><!-- @n obligatorisch, edition kommt immer vor, default n="1" -->
+               	<title level="m" type="main" xml:lang="de">Der Psalmenkommentar von Tura Quaternio IX</title>
+                  <!--- Formatierungen im Titel mit <hi rend="italics|bold">-->
+               	<idno type="short_title">Der Psalmenkommentar von Tura Quaternio IX</idno>
+               	<idno type="ISBN">978-3-506-71431-2</idno>
+               	<editor>
+               		<persName>
+               			<forename>Aloys</forename>
+               			<surname>Kehl</surname>
+               		</persName>
+               		<note type="role">herausgegeben, übersetzt und erläutert von</note>
+               		<!-- diese note ist optional (wenn, dann immer mit @role); die note kann ebenso in <author> vorkommen -->
+               	</editor>
+               	<textLang mainLang="de" otherLangs="fr en" />
+                  <edition n="1">xxx</edition>
                   <imprint>
-                     <pubPlace>Köln</pubPlace><!-- obligatorisch, freier Text, wiederholbar -->
-                     <pubPlace xml:lang="en">Cologne</pubPlace><!-- pubPlace optional mit @xml:lang -->
+                     <pubPlace>Köln</pubPlace>
+                     <pubPlace xml:lang="en">Cologne</pubPlace>
                      <pubPlace>Opladen</pubPlace>
-                     <publisher>Westdeutscher Verlag</publisher><!-- obligatorisch, freier Text, kann leer bleiben -->
-                     <date when="1964">1964</date><!-- obligatorisch, @when Pflicht, Jahreszahl -->
+                     <publisher>Westdeutscher Verlag</publisher>
+                     <date when="1964">1964</date>
                      <note type="reprint">korrigierter Nachdruck 1987 | Nachdruck zum Erstdruck von ... </note>
-                     <!-- optional, wenn dann mit @type=reprint, freier Text, erläutern!, wenn keine Infos, dann frei lassen -->
+                     <!-- optional, wenn dann mit @type=reprint, freier Text, erläutern!-->
                   </imprint>
                </monogr>
                <!-- Zugehörigkeit zu einer Reihe bei unserem type "book" optional -->
@@ -129,6 +118,7 @@
                         <forename>Bernhard</forename>
                         <surname>Bischoff</surname>
                      </persName>
+                  	<note type="role">herausgegeben von</note>
                   </author>
                   <textLang mainLang="de" />
                </analytic>
@@ -239,7 +229,7 @@
                      <orgName>Purdue OWL Staff</orgName>
                   </author>
                   <textLang mainLang="en" />
-                  <date type="posting"></date><!-- optional; wenn auf der Seite ein Erstellungsdatum steht -->
+                  <date type="posting" when="1900"></date><!-- optional; wenn auf der Seite ein Erstellungsdatum steht -->
                </analytic>
                <monogr><!-- monogr muss hier immer vorkommen; Aufbau analog zu monogr in Typ book oder bookSection; AUSSER: idno -> URL & date -> access -->
                   <title level="m" type="main">The Purdue Online Writing Lab (OWL)</title>
@@ -247,7 +237,7 @@
                   <edition n="1.1"><!-- version, revision --></edition><!-- editon optional, wenn da, dann: optional freier Text mit Versions-/Revisionsinformationen, @n Pflicht -->
                   <imprint>
                      <date when="2014">2014</date>
-                     <date type="access"></date><!-- obligatorisch; meint das Datum des letzten Zugriffs auf die Webressource, die hier beschrieben wird -->
+                  	<date type="access" when="1900"></date><!-- obligatorisch; meint das Datum des letzten Zugriffs auf die Webressource, die hier beschrieben wird -->
                   </imprint>
                </monogr>
             </biblStruct>
