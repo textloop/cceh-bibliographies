@@ -49,4 +49,14 @@
 			<assert test="tei:imprint/tei:date" role="error">Erscheinungsjahr fehlt (date)</assert>
 		</rule>
 	</pattern>
+	<!--  -->
+	<!--  -->
+	<!-- series -->
+
+	<pattern id="series">
+		<rule context="tei:series">
+			<assert test="tei:title" role="error">Obligatorisches Element "title" innerhalb von "series" fehlt [series_001]</assert>
+			<assert test="tei:biblScope[@type='vol' or @type='part']" role="error">Obligatorisches Element "biblScope" mit @type="vol" oder @type="part" innerhalb von "series" fehlt [series_002]</assert>
+		</rule>
+	</pattern>
 </schema>

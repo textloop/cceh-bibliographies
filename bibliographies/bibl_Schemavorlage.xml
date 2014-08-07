@@ -58,8 +58,8 @@
                   <biblScope type="vol">1</biblScope>
                </series>
                <series>
-                  <title level="s" type="main">Papyrologica Coloniensia</title><!-- wenn series, dann title Pflicht -->
-                  <biblScope type="vol">I</biblScope><!-- wenn series, dann biblScope Pflicht (type="vol" oder type="part") -->
+                  <title level="s" type="main">Papyrologica Coloniensia</title>
+               	<biblScope type="vol">I</biblScope>
                </series>
                <!-- ##### relatedItems #####
                bei allen Typen möglich
