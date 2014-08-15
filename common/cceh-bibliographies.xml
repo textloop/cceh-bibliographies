@@ -160,7 +160,7 @@
 					<!-- pubPlace -->
 					<elementSpec ident="pubPlace" module="core" mode="change">
 						<attList>
-							<attDef ident="xml:lang" mode="change">
+							<attDef ident="xml:lang" mode="change" >
 								<valList type="open" mode="replace">
 									<!-- FixMe: Sprachliste weiter ausbauen -->
 									<valItem ident="de">
@@ -171,6 +171,28 @@
 									</valItem>
 									<valItem ident="fr">
 										<desc>franz&#xF6;sisch</desc>
+									</valItem>
+								</valList>
+							</attDef>
+						</attList>
+					</elementSpec>
+					<!-- relatedItem -->
+					<elementSpec ident="relatedItem" module="core" mode="change">
+						<attList>
+							<attDef ident="target" mode="change" usage="req"/>
+							<attDef ident="type" mode="change" usage="req">
+								<valList type="closed" mode="replace">
+									<valItem ident="translationOf">
+										<desc>Übersetzung von</desc>
+									</valItem>
+									<valItem ident="reviewOf">
+										<desc>Review zu</desc>
+									</valItem>
+									<valItem ident="reprintOf">
+										<desc>Nchdruck von</desc>
+									</valItem>
+									<valItem ident="partOf">
+										<desc>Teil von</desc>
 									</valItem>
 								</valList>
 							</attDef>

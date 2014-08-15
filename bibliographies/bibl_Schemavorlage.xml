@@ -64,7 +64,7 @@
                <!-- ##### relatedItems #####
                bei allen Typen möglich
                -->
-               <relatedItem type="translationOf" target="#papyri00002"></relatedItem>
+         		<relatedItem type="translationOf" target="#papyri00002"/>
                <!-- @target: Verweis auf die ID des anderen Eintrags
                     @type: Art der Relation, mögliche Werte: translationOf | reviewOf | reprintOf | partOf 
                     es kann mehrere relatedItems geben
