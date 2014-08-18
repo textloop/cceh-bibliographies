@@ -104,16 +104,14 @@
             <biblStruct type="journalArticle" status="published" xml:id="kapxxx00001">
                <analytic>
                   <title level="a" type="main">Paläographische Fragen deutscher Denkmäler der Karolingerzeit</title>
-               	<!-- siehe oben 
-                  = Titel des Aufsatzes -->
                   <idno type="DOI">10.1515/9783110242058.101</idno><!-- siehe oben -->
-                  <author>
-                     <persName>
-                        <forename>Bernhard</forename>
-                        <surname>Bischoff</surname>
-                     </persName>
-                  	<note type="role">herausgegeben von</note>
-                  </author>
+               	<author>
+               		<persName>
+               			<forename>Bernhard</forename>
+               			<surname>Bischoff</surname>
+               		</persName>
+               		<note type="role">herausgegeben von</note>
+               	</author>
                   <textLang mainLang="de" />
                </analytic>
             	<monogr>
@@ -134,7 +132,7 @@
             	</monogr>
             </biblStruct>
             <biblStruct type="bookSection" status="published" xml:id="kapxxx00002">
-               <analytic><!-- der analytic-Teil ist genauso aufgebaut wie derjenige von journalArticle -->
+               <analytic>
                   <title level="a" type="main">“For it is Written in the Law”: Ansegis and the Writing of
                      Carolingian Royal Authority</title>
                   <author>
@@ -182,49 +180,47 @@
                </monogr>
             </biblStruct>
          	<biblStruct type="webPublication" status="published" xml:id="xxxxxx00000">
-               <analytic><!-- analytic-Bereich bei diesem Typ optional, wenn, dann analog zum analytic-Teil von journalArticle & bookSection, BIS AUF:
-                  <date type="posting">
-               -->
-                  <title level="a" type="main">MLA Works Cited: Electronic Sources (Web Publications)</title>
-                  <idno type="short_title"></idno>
-                  <idno type="URL">https://owl.english.purdue.edu/owl/resource/747/08/</idno>
-                  <author>
-                     <persName>
-                        <forename>Tony</forename>
-                        <surname>Russell</surname>
-                     </persName>
-                  </author>
-                  <author>
-                     <persName>
-                        <forename>Allen</forename>
-                        <surname>Brizee</surname>
-                     </persName>
-                  </author>
-                  <author>
-                     <persName>
-                        <forename>Elizabeth</forename>
-                        <surname>Angeli</surname>
-                     </persName>
-                  </author>
-                  <author>
-                     <persName>
-                        <forename>Russell</forename>
-                        <surname>Keck</surname>
-                     </persName>
-                  </author>
-                  <author>
-                     <persName>
-                        <forename>Joshua</forename>
-                        <forename>M.</forename>
-                        <surname>Pais</surname>
-                     </persName>
-                  </author>
-                  <author>
-                     <orgName>Purdue OWL Staff</orgName>
-                  </author>
-                  <textLang mainLang="en" />
-                  <date type="posting" when="1900"></date><!-- optional; wenn auf der Seite ein Erstellungsdatum steht -->
-               </analytic>
+         		<analytic>
+         			<title level="a" type="main">MLA Works Cited: Electronic Sources (Web Publications)</title>
+         			<idno type="short_title"></idno>
+         			<idno type="URL">https://owl.english.purdue.edu/owl/resource/747/08/</idno>
+         			<author>
+         				<persName>
+         					<forename>Tony</forename>
+         					<surname>Russell</surname>
+         				</persName>
+         			</author>
+         			<author>
+         				<persName>
+         					<forename>Allen</forename>
+         					<surname>Brizee</surname>
+         				</persName>
+         			</author>
+         			<author>
+         				<persName>
+         					<forename>Elizabeth</forename>
+         					<surname>Angeli</surname>
+         				</persName>
+         			</author>
+         			<author>
+         				<persName>
+         					<forename>Russell</forename>
+         					<surname>Keck</surname>
+         				</persName>
+         			</author>
+         			<author>
+         				<persName>
+         					<forename>Joshua</forename>
+         					<forename>M.</forename>
+         					<surname>Pais</surname>
+         				</persName>
+         			</author>
+         			<author>
+         				<orgName>Purdue OWL Staff</orgName>
+         			</author>
+         			<textLang mainLang="en" />
+         			<date type="posting" when="1900"></date>
+         		</analytic>
                <monogr><!-- monogr muss hier immer vorkommen; Aufbau analog zu monogr in Typ book oder bookSection; AUSSER: idno -> URL & date -> access -->
                   <title level="m" type="main">The Purdue Online Writing Lab (OWL)</title>
                   <idno type="URL">https://owl.english.purdue.edu/</idno><!-- hier Pflicht -->

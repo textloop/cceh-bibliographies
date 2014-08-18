@@ -72,4 +72,46 @@
 			<assert test="tei:analytic" role="error">Obligatorisches Element "journalArticle" innerhalb von "biblStruct type='journalArticle'" fehlt [biblStruct_journalArticle_002]</assert>
 		</rule>
 	</pattern>
+	<pattern id="biblStruct_journalArticle_analytic">
+		<rule context="tei:biblStruct[@type='journalArticle']/tei:analytic">
+			<assert test="tei:title[@type='main']" role="error">Haupttitel nicht angegeben [biblStruct_journalArticle_analytic_001]</assert>
+			<report test="count(tei:title[@type='main']) > 1" role="warning">Mehr als ein Haupttitel angegeben [biblStruct_journalArticle_analytic_002]</report>
+			<!-- <idno type="short_title"> auch in <analytic> obligatorisch? -->
+			<assert test="tei:title[@level='a']" role="error">Level des Titel nicht angegeben [biblStruct_journalArticle_analytic_003]</assert>
+			<assert test="tei:author" role="error">Autor fehlt [biblStruct_journalArticle_analytic_004]</assert>
+		</rule></pattern>
+	<!--  -->
+	<!--  -->
+	<!-- Typ bookSection -->
+	<pattern id="biblStruct_bookSection">
+		<rule context="tei:biblStruct[@type='bookSection']">
+			<assert test="tei:monogr" role="error">Obligatorisches Element "monogr" innerhalb von "biblStruct type='bookSection'" fehlt [biblStruct_bookSection_001]</assert>
+			<assert test="tei:analytic" role="error">Obligatorisches Element "journalArticle" innerhalb von "biblStruct type='bookSection'" fehlt [biblStruct_bookSection_002]</assert>
+		</rule>
+	</pattern>
+	<pattern id="biblStruct_bookSection_analytic">
+		<rule context="tei:biblStruct[@type='bookSection']/tei:analytic">
+			<assert test="tei:title[@type='main']" role="error">Haupttitel nicht angegeben [biblStruct_bookSection_analytic_001]</assert>
+			<report test="count(tei:title[@type='main']) > 1" role="warning">Mehr als ein Haupttitel angegeben [biblStruct_bookSection_analytic_002]</report>
+			<!-- <idno type="short_title"> auch in <analytic> obligatorisch? -->
+			<assert test="tei:title[@level='a']" role="error">Level des Titel nicht angegeben [biblStruct_bookSection_analytic_003]</assert>
+			<assert test="tei:author" role="error">Autor fehlt [biblStruct_bookSection_analytic_004]</assert>
+		</rule></pattern>
+	<!--  -->
+	<!--  -->
+	<!-- Typ webPublication -->
+	<pattern id="biblStruct_webPublication">
+		<rule context="tei:biblStruct[@type='webPublication']">
+			<assert test="tei:monogr" role="error">Obligatorisches Element "monogr" innerhalb von "biblStruct type='webPublication'" fehlt [biblStruct_webPublication_001]</assert>
+		</rule>
+	</pattern>
+	<!--Wenn analytic vorhanden-->
+	<!--<pattern id="biblStruct_webPublication_analytic">
+		<rule context="tei:biblStruct[@type='webPublication']/tei:analytic">
+			<assert test="tei:title[@type='main']" role="warning">Haupttitel nicht angegeben [biblStruct_webPublication_analytic_001]</assert>
+			<report test="count(tei:title[@type='main']) > 1" role="warning">Mehr als ein Haupttitel angegeben [biblStruct_webPublication_analytic_002]</report>
+			<idno type="short_title"> auch in <analytic> obligatorisch?
+			<assert test="tei:title[@level='a']" role="warning">Level des Titel nicht angegeben [biblStruct_webPublication_analytic_003]</assert>
+			<assert test="tei:author" role="warning">Autor fehlt [biblStruct_webPublication_analytic_004]</assert>
+		</rule></pattern>-->
 	</schema>
