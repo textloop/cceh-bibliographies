@@ -126,9 +126,12 @@
 							<attDef ident="type" mode="change">
 								<valList type="closed" mode="replace">
 									<valItem ident="posting">
-										<desc>Erstellungsdatum der Site</desc>
+										<desc>Erstellungsdatum der Webressource</desc>
 									</valItem>
-									</valList>
+									<valItem ident="access">
+										<desc>Datum des letzten Zugriffs auf die Webressource</desc>
+									</valItem>
+								</valList>
 							</attDef>
 						</attList>
 					</elementSpec>
