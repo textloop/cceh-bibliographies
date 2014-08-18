@@ -115,17 +115,15 @@
                   <textLang mainLang="de" />
                </analytic>
             	<monogr>
-            		<title level="j" type="main"><!-- bei journalArticle hier level="j" statt "m" (book)
-                  = Titel der Zeitschrift -->
+            		<title level="j" type="main">
             			Frühmittelalterliche Studien (FMSt)
             			<!-- UH: wollen wir diese Komplexität im Titel zulassen (Abkürzung / Auflösung)? -->
             		</title>
             		<idno type="ISSN">1613-0812 (Online)</idno><!-- optional -->
             		<idno type="ISSN">0071-9706 (Print)</idno>
-            		<imprint>
-            			<!-- dies sind die biblScopes, die in journalArticle gebraucht werden (nur diese) -->
-            			<biblScope type="vol">5</biblScope><!-- Band -->
-            			<biblScope unit="issue"/><!-- Nr -->
+            		<imprint>            			
+            			<biblScope type="vol">5</biblScope>
+            			<biblScope unit="issue"/>
             			<biblScope type="pp">101-134</biblScope>
             			<date when="1971">1971</date>
             		</imprint>
@@ -143,7 +141,7 @@
                   </author>
                   <textLang mainLang="en" />
                </analytic>
-               <monogr><!-- der monogr-Teil ist genauso aufgebaut wie derjenige von book -->
+               <monogr>
                   <title level="m" type="main">Early Medieval Studies in Memory of Patrick Wormald</title>
                   <editor>
                      <persName>
@@ -169,9 +167,9 @@
                         <surname>Pelteret</surname>
                      </persName>
                   </editor>
+               	<edition n="1">xxx</edition>
                   <imprint>
                      <pubPlace>Aldershot</pubPlace>
-                     <!-- diese biblScopes sind besonders für bookSection: pp, chap -->
                      <biblScope type="pp">219-235</biblScope>
                      <biblScope type="chap"></biblScope>
                      <publisher>Ashgate</publisher>
@@ -221,13 +219,13 @@
          			<textLang mainLang="en" />
          			<date type="posting" when="1900"></date>
          		</analytic>
-               <monogr><!-- monogr muss hier immer vorkommen; Aufbau analog zu monogr in Typ book oder bookSection; AUSSER: idno -> URL & date -> access -->
+               <monogr>
                   <title level="m" type="main">The Purdue Online Writing Lab (OWL)</title>
                   <idno type="URL">https://owl.english.purdue.edu/</idno><!-- hier Pflicht -->
-                  <edition n="1.1"><!-- version, revision --></edition><!-- editon optional, wenn da, dann: optional freier Text mit Versions-/Revisionsinformationen, @n Pflicht -->
+                  <edition n="1.1"></edition><!-- editon optional, wenn da, dann: optional freier Text mit Versions-/Revisionsinformationen, @n Pflicht -->
                   <imprint>
-                     <date when="2014">2014</date>
-                  	<date type="access" when="1900"></date><!-- obligatorisch; meint das Datum des letzten Zugriffs auf die Webressource, die hier beschrieben wird -->
+                     <date type="posting" when="2014">2014</date>
+                  	<date type="access" when="1900"></date>
                   </imprint>
                </monogr>
             </biblStruct>

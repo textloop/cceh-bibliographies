@@ -122,6 +122,7 @@
 					<!-- date -->
 					<elementSpec ident="date" module="core" mode="change">
 						<attList>
+							<!--Hier brauchen wir @type! Problem siehe imprint/monogr in webPublication --> 
 							<attDef ident="when" mode="change" usage="req"/>
 							<attDef ident="type" mode="change">
 								<valList type="closed" mode="replace">
@@ -290,9 +291,9 @@
 							<attDef ident="n" mode="change" usage="req">
 								<valList type="open" mode="replace">
 									<!-- FixMe: Feinschliff für Werte in <desc> -->
-									<valItem ident="1">
+									<!--<valItem ident="1">
 										<desc>Informationen zur 1. Ausgabe oder Auflage (Freitext)</desc>
-									</valItem>
+									</valItem>-->
 								</valList>
 							</attDef>
 						</attList>
