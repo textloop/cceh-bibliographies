@@ -89,7 +89,8 @@
 			<assert test="tei:title[@type='main']" role="error">Haupttitel nicht angegeben [biblStruct_journalArticle_analytic_001]</assert>
 			<report test="count(tei:title[@type='main']) > 1" role="warning">Mehr als ein Haupttitel angegeben [biblStruct_journalArticle_analytic_002]</report>
 			<!-- <idno type="short_title"> auch in <analytic> obligatorisch? -->
-			<assert test="tei:title[@level='a']" role="error">Level des Titel nicht angegeben [biblStruct_journalArticle_analytic_003]</assert>
+			<assert test="tei:idno[@type='short_title']" role="error">Kurztitel nicht angegeben [biblStruct_journalArticle_monogr_003]</assert>
+			<assert test="tei:title[@level='a']" role="error">Level des Titel nicht angegeben [biblStruct_journalArticle_analytic_004]</assert>
 			<assert test="tei:author" role="error">Autor fehlt [biblStruct_journalArticle_analytic_004]</assert>
 		</rule></pattern>
 	<!--  -->
@@ -123,8 +124,9 @@
 			<assert test="tei:title[@type='main']" role="error">Haupttitel nicht angegeben [biblStruct_bookSection_analytic_001]</assert>
 			<report test="count(tei:title[@type='main']) > 1" role="warning">Mehr als ein Haupttitel angegeben [biblStruct_bookSection_analytic_002]</report>
 			<!-- <idno type="short_title"> auch in <analytic> obligatorisch? -->
-			<assert test="tei:title[@level='a']" role="error">Level des Titel nicht angegeben [biblStruct_bookSection_analytic_003]</assert>
-			<assert test="tei:author" role="error">Autor fehlt [biblStruct_bookSection_analytic_004]</assert>
+			<assert test="tei:idno[@type='short_title']" role="error">Kurztitel nicht angegeben [biblStruct_bookSection_monogr_003]</assert>
+			<assert test="tei:title[@level='a']" role="error">Level des Titel nicht angegeben [biblStruct_bookSection_analytic_004]</assert>
+			<assert test="tei:author" role="error">Autor fehlt [biblStruct_bookSection_analytic_005]</assert>
 		</rule></pattern>
 	<!--  -->
 	<!--  -->
@@ -138,12 +140,11 @@
 		<rule context="tei:biblStruct[@type='webPublication']/tei:monogr">
 			<assert test="tei:title[@type='main']" role="error">Haupttitel nicht angegeben [biblStruct_webPublication_monogr_001]</assert>
 			<report test="count(tei:title[@type='main']) > 1" role="warning">Mehr als ein Haupttitel angegeben [biblStruct_webPublication_monogr_002]</report>
-			<!-- FixMe:<idno type="short_title"> obligatorisch, max 60 Zeichen -->
-			<!-- <idno type="short_title"> auch in <analytic> obligatorisch? -->
 			<assert test="tei:title[@level='m']" role="error">Level des Titel nicht angegeben [biblStruct_webPublication_monogr_003]</assert>
-			<assert test="tei:idno[@type='URL']" role="error">URL nicht angegeben [biblStruct_webPublication_monogr_004]</assert>
-			<assert test="tei:imprint/tei:date[@type='posting']" role="error">Erstellungsdatum der Webressource [biblStruct_webPublication_monogr_005]</assert>
-			<assert test="tei:imprint/tei:date[@type='access']" role="error">Datum des letzten Zugriffs auf die Webressource fehlt [biblStruct_webPublication_monogr_006]</assert>
+			<!-- <idno type="short_title"> auch in <analytic> obligatorisch? -->
+			<assert test="tei:idno[@type='URL']" role="error">URL nicht angegeben [biblStruct_webPublication_monogr_005]</assert>
+			<assert test="tei:imprint/tei:date[@type='posting']" role="error">Erstellungsdatum der Webressource [biblStruct_webPublication_monogr_006]</assert>
+			<assert test="tei:imprint/tei:date[@type='access']" role="error">Datum des letzten Zugriffs auf die Webressource fehlt [biblStruct_webPublication_monogr_007]</assert>
 			</rule>
 	</pattern>
 	<!--Wenn analytic vorhanden-->
@@ -151,8 +152,8 @@
 		<rule context="tei:biblStruct[@type='webPublication']/tei:analytic">
 			<assert test="tei:title[@type='main']" role="warning">Haupttitel nicht angegeben [biblStruct_webPublication_analytic_001]</assert>
 			<report test="count(tei:title[@type='main']) > 1" role="warning">Mehr als ein Haupttitel angegeben [biblStruct_webPublication_analytic_002]</report>
-			<idno type="short_title"> auch in <analytic> obligatorisch?
-			<assert test="tei:title[@level='a']" role="warning">Level des Titel nicht angegeben [biblStruct_webPublication_analytic_003]</assert>
+			<assert test="tei:idno[@type='short_title']" role="error">Kurztitel nicht angegeben [biblStruct_webPublication_analytic_003]</assert>
+			<assert test="tei:title[@level='a']" role="warning">Level des Titel nicht angegeben [biblStruct_webPublication_analytic_004]</assert>
 			<assert test="tei:author" role="warning">Autor fehlt [biblStruct_webPublication_analytic_004]</assert>
 		</rule></pattern>-->
 	</schema>
