@@ -143,6 +143,7 @@
 								<valList type="closed" mode="replace">
 									<!-- FixMe: desc überarbeiten -->
 									<valItem ident="reprint">
+										<!--näher erläutern!-->
 										<desc>[Korrigierter Nachdruck xxxx | Nachdruck zum Erstdruck von xxxx]</desc>
 									</valItem>
 									<valItem ident="role">
@@ -200,7 +201,7 @@
 										<desc>Review zu</desc>
 									</valItem>
 									<valItem ident="reprintOf">
-										<desc>Nchdruck von</desc>
+										<desc>Nachdruck von</desc>
 									</valItem>
 									<valItem ident="partOf">
 										<desc>Teil von</desc>

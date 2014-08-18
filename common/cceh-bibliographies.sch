@@ -62,6 +62,7 @@
 			<assert test="tei:imprint/tei:pubPlace" role="error">Erscheinungsort fehlt (pubPlace) [biblStruct_book_monogr_008]</assert>
 			<assert test="tei:imprint/tei:publisher" role="error">Herausgeber fehlt (publisher) [biblStruct_book_monogr_009]</assert>
 			<assert test="tei:imprint/tei:date" role="error">Erscheinungsjahr fehlt (date) [biblStruct_book_monogr_010]</assert>
+			<report test="tei:imprint/tei:note[not(@type='reprint')]" role="warning">Note bezieht sich nicht auf Reprint</report>
 		</rule>
 	</pattern>
 	<!--  -->

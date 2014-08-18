@@ -18,14 +18,9 @@
   <text>
       <body>
          <listBibl>
-            <!-- Schema für bestimmten Typen:
-              <element>
-                  <name>biblStruct</name>
-                  <attribute><name>type</name><value>book</value></attribute>
-                  <ref name="tei_...">
-              </element>
-            -->
+         	<!-- Schema für bestimmten Typen: gelöst via schematron-->
          	<!-- wohin übergreifende Prüfung value darf nie leer sein? -->
+         	<!-- wohin übergreifende Prüfung element darf nie leer sein? -->
          	<biblStruct type="book" status="published" xml:id="papyri00001">
                <monogr>
                	<title level="m" type="main" xml:lang="de">Der Psalmenkommentar von Tura Quaternio IX</title>
@@ -49,7 +44,7 @@
                      <publisher>Westdeutscher Verlag</publisher>
                      <date when="1964">1964</date>
                      <note type="reprint">korrigierter Nachdruck 1987 | Nachdruck zum Erstdruck von ... </note>
-                     <!-- optional, wenn dann mit @type=reprint, freier Text, erläutern!-->
+                     <!-- optional, freier Text!-->
                   </imprint>
                </monogr>
                <!-- Zugehörigkeit zu einer Reihe bei unserem type "book" optional -->
@@ -223,7 +218,7 @@
          		</analytic>
                <monogr>
                   <title level="m" type="main">The Purdue Online Writing Lab (OWL)</title>
-                  <idno type="URL">https://owl.english.purdue.edu/</idno><!-- hier Pflicht -->
+               	<idno type="URL">https://owl.english.purdue.edu/</idno>
                   <edition n="1.1"></edition><!-- editon optional, wenn da, dann: optional freier Text mit Versions-/Revisionsinformationen, @n Pflicht -->
                   <imprint>
                      <date type="posting" when="2014">2014</date>
