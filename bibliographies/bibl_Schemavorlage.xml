@@ -33,7 +33,7 @@
                			<surname>Kehl</surname>
                		</persName>
                		<note type="role">herausgegeben, übersetzt und erläutert von</note>
-               		<!-- diese note ist optional (wenn, dann immer mit @role); die note kann ebenso in <author> vorkommen -->
+               		<!-- diese note ist optional -->
                	</editor>
                	<textLang mainLang="de" otherLangs="fr en" />
                   <edition n="1">xxx</edition>
