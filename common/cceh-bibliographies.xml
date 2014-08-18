@@ -139,7 +139,7 @@
 					<!-- note -->
 					<elementSpec ident="note" module="core" mode="change">
 						<attList>
-							<attDef ident="type" mode="change">
+							<attDef ident="type" mode="change" usage="req">
 								<valList type="closed" mode="replace">
 									<!-- FixMe: desc überarbeiten -->
 									<valItem ident="reprint">
@@ -167,7 +167,19 @@
 									</valItem>
 								</valList>
 							</attDef>
-						</attList>
+							<attDef ident="subtype" mode="change">
+								<valList type="closed" mode="replace">
+									<!-- FixMe: desc überarbeiten -->
+									<valItem ident="signature">
+										<!--näher erläutern!-->
+										<desc>Katalogeintrag</desc>
+									</valItem>
+									<valItem ident="digitized_version">
+										<desc>Digitalisat</desc>
+									</valItem>
+									</valList>
+							</attDef>
+							</attList>
 					</elementSpec>
 					<!-- pubPlace -->
 					<elementSpec ident="pubPlace" module="core" mode="change">

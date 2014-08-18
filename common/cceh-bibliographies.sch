@@ -38,7 +38,35 @@
 			<assert test="*/tei:surname or tei:orgName" role="error">Weder Nachname noch Organisation angegeben</assert>
 		</rule>
 	</pattern>
-	
+	<!--  -->
+	<!--  -->
+	<!-- notes in allen BiblStruct-Typen vorkommend-->
+	<pattern id="biblStruct_note_type_rel_text">
+		<rule context="tei:biblStruct/tei:note[@type='rel_text']">
+			<report test="not(contains(.,'Edition') or contains(.,'Übersetzung') or contains(.,'Kommentar'))">Note gibt keine Bezeihung zum übergeordneten text an (Edition, Übersetzung oder Kommentar müssen als Wort enthalten sein) </report>
+		</rule>
+	</pattern>
+	<pattern id="biblStruct_note_type_item">
+		<rule context="tei:biblStruct/tei:note[@type='item']">
+			<report test="not(@subtype)">Subtype nicht ausgewiesen</report>
+			<report test="not(@target)">URL nicht ausgewiesen</report>
+			</rule>
+	</pattern>
+	<pattern id="biblStruct_note_type_abstract">
+	<rule context="tei:biblStruct/tei:note[@type='abstract']">
+		<assert test="tei:p">Strukturierende p-Elemente fehlen</assert>
+	</rule></pattern>
+	<pattern id="biblStruct_note">
+		<rule context="tei:biblStruct">
+			<report test="count(tei:note[@type='notes']) > 1">Mehr als eine allgemeine Anmerkung</report>
+		</rule>	
+	</pattern>
+	<pattern id="biblStruct_note_type_notes">
+		<rule context="tei:biblStruct/tei:note[@type='notes']">
+			<assert test="tei:p">Strukturierende p-Elemente fehlen</assert>
+			</rule>	
+	</pattern>
+
 	<!--  -->
 	<!--  -->
 	<!-- Typ book -->

@@ -3,7 +3,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2014-08-18T12:50:40Z. 
+Schema generated from ODD source 2014-08-18T16:06:50Z. 
 Edition: Version 2.6.0. Last updated on
 	20th January 2014, revision 12802
 Edition Location: http://www.tei-c.org/Vault/P5/Version 2.6.0/
@@ -1708,25 +1708,33 @@ The element indicated by @spanTo (<sch:value-of select="@spanTo"/>) must follow 
          <ref name="tei_att.placement.attributes"/>
          <ref name="tei_att.pointing.attributes"/>
          <ref name="tei_att.responsibility.attributes"/>
-         <ref name="tei_att.typed.attribute.subtype"/>
+         <attribute name="type">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the element in some sense, using any convenient classification scheme or typology.</a:documentation>
+            <choice>
+               <value>reprint</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">[Korrigierter Nachdruck xxxx | Nachdruck zum Erstdruck von xxxx]</a:documentation>
+               <value>role</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">[herausgegeben, übersetzt und erläutert von]</a:documentation>
+               <value>rel_text</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">die Beziehung des bibliografischen Items zu einem Primärtext Vorschläge: Edition|Übersetzung|Kommentar oder Freitext</a:documentation>
+               <value>tags</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Schlagwörter, à la DARE; kann einmal vorkommen; kommaseparierte Liste</a:documentation>
+               <value>abstract</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Teasertext</a:documentation>
+               <value>notes</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">allgemeine Anmerkungen - durch p-Elemente strukturiert - kann einmal vorkommen</a:documentation>
+               <value>item</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Verfügbarkeit</a:documentation>
+            </choice>
+         </attribute>
          <optional>
-            <attribute name="type">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the element in some sense, using any convenient classification scheme or typology.</a:documentation>
+            <attribute name="subtype">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides a sub-categorization of the element, if needed</a:documentation>
                <choice>
-                  <value>reprint</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">[Korrigierter Nachdruck xxxx | Nachdruck zum Erstdruck von xxxx]</a:documentation>
-                  <value>role</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">[herausgegeben, übersetzt und erläutert von]</a:documentation>
-                  <value>rel_text</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">die Beziehung des bibliografischen Items zu einem Primärtext Vorschläge: Edition|Übersetzung|Kommentar oder Freitext</a:documentation>
-                  <value>tags</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Schlagwörter, à la DARE; kann einmal vorkommen; kommaseparierte Liste</a:documentation>
-                  <value>abstract</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Teasertext</a:documentation>
-                  <value>notes</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">allgemeine Anmerkungen - durch p-Elemente strukturiert - kann einmal vorkommen</a:documentation>
-                  <value>item</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Verfügbarkeit</a:documentation>
+                  <value>signature</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Katalogeintrag</a:documentation>
+                  <value>digitized_version</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Digitalisat</a:documentation>
                </choice>
             </attribute>
          </optional>
@@ -2223,7 +2231,7 @@ relatedItem element must be empty</sch:report>
                <value>reviewOf</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Review zu</a:documentation>
                <value>reprintOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Nchdruck von</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Nachdruck von</a:documentation>
                <value>partOf</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Teil von</a:documentation>
             </choice>
@@ -2344,7 +2352,7 @@ Sample values include: 1] text; 2] corpus</a:documentation>
          <ref name="tei_att.global.linking.attribute.select"/>
          <attribute name="n">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(number) gives a number (or other label) for an element, which is not necessarily unique within the document.
-Sample values include: 1] 1</a:documentation>
+Sample values include: </a:documentation>
             <ref name="tei_data.text"/>
          </attribute>
          <empty/>

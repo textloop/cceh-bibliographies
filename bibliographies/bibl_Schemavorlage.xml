@@ -56,45 +56,16 @@
                   <title level="s" type="main">Papyrologica Coloniensia</title>
                	<biblScope type="vol">I</biblScope>
                </series>
-               <!-- ##### relatedItems #####
-               bei allen Typen möglich
-               -->
          		<relatedItem type="translationOf" target="#papyri00002"/>
-                <!-- ##### Bereich für zusätzliche Anmerkungen ##### 
-                  erstmal:
-                  - alle optional
-                  - Reihenfolge egal
-                  - bei allen Typen gleichermaßen möglich
-               -->
-               <note type="rel_text"></note><!-- 
-                  die Beziehung des bibliografischen Items zu einem Primärtext
-                  Vorschläge: Edition|Übersetzung|Kommentar oder Freitext
-                  <rng:choice>
-                     <rng:choice>
-                        <rng:value></rng:value>
-                        ...
-                     </rng:choice>
-                     <rng:text />
-                  </rng:choice>
-               -->
-               <note type="tags"></note>
+         		<note type="rel_text">Kommentar zu</note>
+         		<note type="tags"></note>
                <!-- Schlagwörter, à la DARE; kann einmal vorkommen; kommaseparierte Liste -->
-               <note type="item" subtype="signature" target="http://www.ub.uni-koeln.de/usbportal?query=inst432:10111">B4/2006/Ur</note>
+         		<note type="item" subtype="signature" target="http://www.ub.uni-koeln.de/usbportal?query=inst432:10111">B4/2006/Ur</note>
                <!--
-               - @subtype: signature | digitized_version
-               - @target: URL zum Katalogeintrag oder Digitalisat
                - Inhalt in Note erlaubt (z.B. Signatur, also freier Text)
-               - das Element kann mehrfach vorkommen. Muss aber nicht vorkommen. Meint: ein Exemplar (in einer Bibliothek oder digital) des hier bibliografierten Werks
                -->
-               <note type="abstract"><p></p></note>
-               <!-- 
-                  - kann einmal vorkommen, muss nicht
-                  - durch <p>-Elemente strukturiert -->
+         		<note type="abstract"><p></p></note>
                <note type="notes"><p>bla bla bla</p></note>
-               <!-- allgemeine Anmerkungen
-                  - durch <p>-Elemente strukturiert
-                  - kann einmal vorkommen
-               -->
             </biblStruct>
             <biblStruct type="journalArticle" status="published" xml:id="kapxxx00001">
                <analytic>
