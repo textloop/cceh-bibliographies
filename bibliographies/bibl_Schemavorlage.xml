@@ -65,13 +65,7 @@
                bei allen Typen möglich
                -->
          		<relatedItem type="translationOf" target="#papyri00002"/>
-               <!-- @target: Verweis auf die ID des anderen Eintrags
-                    @type: Art der Relation, mögliche Werte: translationOf | reviewOf | reprintOf | partOf 
-                    es kann mehrere relatedItems geben
-                    jeder Typ aber nur jeweils einmal
-               -->
-               
-               <!-- ##### Bereich für zusätzliche Anmerkungen ##### 
+                <!-- ##### Bereich für zusätzliche Anmerkungen ##### 
                   erstmal:
                   - alle optional
                   - Reihenfolge egal
@@ -108,9 +102,9 @@
                -->
             </biblStruct>
             <biblStruct type="journalArticle" status="published" xml:id="kapxxx00001">
-               <!-- muss immer analytic haben, und monogr -->
                <analytic>
-                  <title level="a" type="main">Paläographische Fragen deutscher Denkmäler der Karolingerzeit</title><!-- siehe oben 
+                  <title level="a" type="main">Paläographische Fragen deutscher Denkmäler der Karolingerzeit</title>
+               	<!-- siehe oben 
                   = Titel des Aufsatzes -->
                   <idno type="DOI">10.1515/9783110242058.101</idno><!-- siehe oben -->
                   <author>
@@ -122,22 +116,22 @@
                   </author>
                   <textLang mainLang="de" />
                </analytic>
-               <monogr>
-                  <title level="j" type="main"><!-- bei journalArticle hier level="j" statt "m" (book)
+            	<monogr>
+            		<title level="j" type="main"><!-- bei journalArticle hier level="j" statt "m" (book)
                   = Titel der Zeitschrift -->
-                     Frühmittelalterliche Studien (FMSt)
-                     <!-- UH: wollen wir diese Komplexität im Titel zulassen (Abkürzung / Auflösung)? -->
-                  </title>
-                  <idno type="ISSN">1613-0812 (Online)</idno><!-- optional -->
-                  <idno type="ISSN">0071-9706 (Print)</idno>
-                  <imprint>
-                     <!-- dies sind die biblScopes, die in journalArticle gebraucht werden (nur diese) -->
-                     <biblScope type="vol">5</biblScope><!-- Band -->
-                     <biblScope unit="issue"/><!-- Nr -->
-                     <biblScope type="pp">101-134</biblScope>
-                     <date when="1971">1971</date>
-                  </imprint>
-               </monogr>
+            			Frühmittelalterliche Studien (FMSt)
+            			<!-- UH: wollen wir diese Komplexität im Titel zulassen (Abkürzung / Auflösung)? -->
+            		</title>
+            		<idno type="ISSN">1613-0812 (Online)</idno><!-- optional -->
+            		<idno type="ISSN">0071-9706 (Print)</idno>
+            		<imprint>
+            			<!-- dies sind die biblScopes, die in journalArticle gebraucht werden (nur diese) -->
+            			<biblScope type="vol">5</biblScope><!-- Band -->
+            			<biblScope unit="issue"/><!-- Nr -->
+            			<biblScope type="pp">101-134</biblScope>
+            			<date when="1971">1971</date>
+            		</imprint>
+            	</monogr>
             </biblStruct>
             <biblStruct type="bookSection" status="published" xml:id="kapxxx00002">
                <analytic><!-- der analytic-Teil ist genauso aufgebaut wie derjenige von journalArticle -->

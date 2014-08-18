@@ -17,6 +17,12 @@
 			<report test="count(tei:relatedItem[@type='partOf']) > 1" role="warning">Mehr als ein relatedItem als "partOf" angegeben [biblStruct_relatedItem_004]</report>
 		</rule>
 	</pattern>
+	<pattern id="series">
+		<rule context="tei:series">
+			<assert test="tei:title" role="error">Obligatorisches Element "title" innerhalb von "series" fehlt [series_001]</assert>
+			<assert test="tei:biblScope[@type='vol' or @type='part']" role="error">Obligatorisches Element "biblScope" mit @type="vol" oder @type="part" innerhalb von "series" fehlt [series_002]</assert>
+		</rule>
+	</pattern>
 	<!--  -->
 	<!--  -->
 	<!-- Prüfungen in verstreuten editor-Elementen -->
@@ -57,15 +63,13 @@
 			<assert test="tei:imprint/tei:date" role="error">Erscheinungsjahr fehlt (date)</assert>
 		</rule>
 	</pattern>
-
 	<!--  -->
 	<!--  -->
-	<!-- series -->
-
-	<pattern id="series">
-		<rule context="tei:series">
-			<assert test="tei:title" role="error">Obligatorisches Element "title" innerhalb von "series" fehlt [series_001]</assert>
-			<assert test="tei:biblScope[@type='vol' or @type='part']" role="error">Obligatorisches Element "biblScope" mit @type="vol" oder @type="part" innerhalb von "series" fehlt [series_002]</assert>
+	<!-- Typ journalArticle -->
+	<pattern id="biblStruct_journalArticle">
+		<rule context="tei:biblStruct[@type='journalArticle']">
+			<assert test="tei:monogr" role="error">Obligatorisches Element "monogr" innerhalb von "biblStruct type='journalArticle'" fehlt [biblStruct_journalArticle_001]</assert>
+			<assert test="tei:analytic" role="error">Obligatorisches Element "journalArticle" innerhalb von "biblStruct type='journalArticle'" fehlt [biblStruct_journalArticle_002]</assert>
 		</rule>
 	</pattern>
-</schema>
+	</schema>
