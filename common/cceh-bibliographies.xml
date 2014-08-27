@@ -122,16 +122,28 @@
 					<!-- date -->
 					<elementSpec ident="date" module="core" mode="change">
 						<attList>
+							<!--Hier brauchen wir @type! Problem siehe imprint/monogr in webPublication --> 
 							<attDef ident="when" mode="change" usage="req"/>
+							<attDef ident="type" mode="change">
+								<valList type="closed" mode="replace">
+									<valItem ident="posting">
+										<desc>Erstellungsdatum der Webressource</desc>
+									</valItem>
+									<valItem ident="access">
+										<desc>Datum des letzten Zugriffs auf die Webressource</desc>
+									</valItem>
+								</valList>
+							</attDef>
 						</attList>
 					</elementSpec>
 					<!-- note -->
 					<elementSpec ident="note" module="core" mode="change">
 						<attList>
-							<attDef ident="type" mode="change">
+							<attDef ident="type" mode="change" usage="req">
 								<valList type="closed" mode="replace">
 									<!-- FixMe: desc überarbeiten -->
 									<valItem ident="reprint">
+										<!--näher erläutern!-->
 										<desc>[Korrigierter Nachdruck xxxx | Nachdruck zum Erstdruck von xxxx]</desc>
 									</valItem>
 									<valItem ident="role">
@@ -155,7 +167,19 @@
 									</valItem>
 								</valList>
 							</attDef>
-						</attList>
+							<attDef ident="subtype" mode="change">
+								<valList type="closed" mode="replace">
+									<!-- FixMe: desc überarbeiten -->
+									<valItem ident="signature">
+										<!--näher erläutern!-->
+										<desc>Katalogeintrag</desc>
+									</valItem>
+									<valItem ident="digitized_version">
+										<desc>Digitalisat</desc>
+									</valItem>
+									</valList>
+							</attDef>
+							</attList>
 					</elementSpec>
 					<!-- pubPlace -->
 					<elementSpec ident="pubPlace" module="core" mode="change">
@@ -189,7 +213,7 @@
 										<desc>Review zu</desc>
 									</valItem>
 									<valItem ident="reprintOf">
-										<desc>Nchdruck von</desc>
+										<desc>Nachdruck von</desc>
 									</valItem>
 									<valItem ident="partOf">
 										<desc>Teil von</desc>
@@ -280,9 +304,9 @@
 							<attDef ident="n" mode="change" usage="req">
 								<valList type="open" mode="replace">
 									<!-- FixMe: Feinschliff für Werte in <desc> -->
-									<valItem ident="1">
+									<!--<valItem ident="1">
 										<desc>Informationen zur 1. Ausgabe oder Auflage (Freitext)</desc>
-									</valItem>
+									</valItem>-->
 								</valList>
 							</attDef>
 						</attList>
