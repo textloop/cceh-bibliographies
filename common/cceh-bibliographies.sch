@@ -9,6 +9,14 @@
 			<assert test="@type" role="error">idno muss über @type verfügen [idno_001]</assert>
 		</rule>
 	</pattern>
+	<pattern id="relatedItem">
+		<rule context="tei:biblStruct">
+			<report test="count(tei:relatedItem[@type='translationOf']) > 1" role="warning">Mehr als ein relatedItem als "translationOf" angegeben [biblStruct_relatedItem_001]</report>
+			<report test="count(tei:relatedItem[@type='reviewOf']) > 1" role="warning">Mehr als ein relatedItem als "reviewOf" angegeben [biblStruct_relatedItem_002]</report>
+			<report test="count(tei:relatedItem[@type='reprintOf']) > 1" role="warning">Mehr als ein relatedItem als "reprintOf" angegeben [biblStruct_relatedItem_003]</report>
+			<report test="count(tei:relatedItem[@type='partOf']) > 1" role="warning">Mehr als ein relatedItem als "partOf" angegeben [biblStruct_relatedItem_004]</report>
+		</rule>
+	</pattern>
 	<!--  -->
 	<!--  -->
 	<!-- Prüfungen in verstreuten editor-Elementen -->
@@ -49,6 +57,7 @@
 			<assert test="tei:imprint/tei:date" role="error">Erscheinungsjahr fehlt (date)</assert>
 		</rule>
 	</pattern>
+
 	<!--  -->
 	<!--  -->
 	<!-- series -->
