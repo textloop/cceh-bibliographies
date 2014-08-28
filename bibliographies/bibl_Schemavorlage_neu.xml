@@ -40,7 +40,7 @@
                      - optional mit @xml:lang
                   -->
                   <idno type="ISBN">978-3-506-71431-2</idno>
-                  <idno type="short_title">Psalmenkommentar Tura Quaternio</idno>
+                  <idno type="short_title"></idno>
                   <!-- idno type short_title: obligatorisch; die anderen optional; idno kann also mehrfach vorkommen, @type dabei immer obligatorisch
                      - short_title: max 60 Zeichen
                      @type z.B. ISBN, ISSN, DOI, short_title, URL -->
