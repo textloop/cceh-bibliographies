@@ -135,7 +135,7 @@
                   <title level="a" type="main">Paläographische Fragen deutscher Denkmäler der Karolingerzeit</title><!-- siehe oben 
                   = Titel des Aufsatzes -->
                   <idno type="DOI">10.1515/9783110242058.101</idno><!-- siehe oben -->
-                  <idno type="short_title">Kurztitel</idno>
+               	<idno type="short_title">Kurztitel</idno>
                   <author>
                      <persName>
                         <forename>Bernhard</forename>
@@ -165,7 +165,7 @@
                <analytic><!-- der analytic-Teil ist genauso aufgebaut wie derjenige von journalArticle -->
                   <title level="a" type="main">“For it is Written in the Law”: Ansegis and the Writing of
                      Carolingian Royal Authority</title>
-                  <idno type="short_title">Kurztitel</idno>
+               	<idno type="short_title">Kurztitel</idno>
                   <author>
                      <persName>
                         <forename>Stuart</forename>
