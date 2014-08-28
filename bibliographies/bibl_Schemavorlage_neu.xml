@@ -47,7 +47,7 @@
                   <editor><!-- oder author -->
                      <persName><!-- neben persName immer auch orgName erlauben/anbieten? -->
                         <forename>Aloys</forename><!-- kann mehrfach vorkommen -->
-                        <surname>Kehl</surname><!-- kann mehrfach vorkommen -->
+                     	<surname>Kehl</surname><!-- kann mehrfach vorkommen -->
                      </persName>
                      <note type="role">herausgegeben, übersetzt und erläutert von</note>
                      <!-- diese note ist optional (wenn, dann immer mit @role); die note kann ebenso in <author> vorkommen -->
@@ -68,7 +68,7 @@
                </monogr>
                <!-- Zugehörigkeit zu einer Reihe bei unserem type "book" optional -->
                <series>
-                  <title level="s" type="main">Pap. Colon. Theol.</title>
+               	<title level="s" type="main">Pap. Colon. Theol.</title>
                   <biblScope unit="volume">1</biblScope>
                </series>
                <series>
