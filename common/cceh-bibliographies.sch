@@ -125,7 +125,7 @@
 			<assert test="tei:title[@type='main']" role="error">Haupttitel nicht angegeben [biblStruct_journalArticle_analytic_001]</assert>
 			<report test="count(tei:title[@type='main']) > 1" role="warning">Mehr als ein Haupttitel angegeben [biblStruct_journalArticle_analytic_002]</report>
 			<!-- <idno type="short_title"> auch in <analytic> obligatorisch? -->
-			<assert test="tei:idno[@type='short_title']" role="error">Kurztitel nicht angegeben [biblStruct_journalArticle_analytic_003]</assert>
+			<assert test="tei:idno[@type='short_title'][. != '']" role="error">Kurztitel nicht angegeben [biblStruct_journalArticle_analytic_003]</assert>
 			<assert test="tei:title[@level='a']" role="error">Level des Titel nicht angegeben [biblStruct_journalArticle_analytic_004]</assert>
 			<assert test="tei:author" role="error">Autor fehlt [biblStruct_journalArticle_analytic_004]</assert>
 		</rule></pattern>
@@ -160,7 +160,7 @@
 			<assert test="tei:title[@type='main']" role="error">Haupttitel nicht angegeben [biblStruct_bookSection_analytic_001]</assert>
 			<report test="count(tei:title[@type='main']) > 1" role="warning">Mehr als ein Haupttitel angegeben [biblStruct_bookSection_analytic_002]</report>
 			<!-- <idno type="short_title"> auch in <analytic> obligatorisch? -->
-			<assert test="tei:idno[@type='short_title']" role="error">Kurztitel nicht angegeben [biblStruct_bookSection_monogr_003]</assert>
+			<assert test="tei:idno[[@type='short_title'][. != '']" role="error">Kurztitel nicht angegeben [biblStruct_bookSection_monogr_003]</assert>
 			<assert test="tei:title[@level='a']" role="error">Level des Titel nicht angegeben [biblStruct_bookSection_analytic_004]</assert>
 			<assert test="tei:author" role="error">Autor fehlt [biblStruct_bookSection_analytic_005]</assert>
 		</rule></pattern>
