@@ -20,7 +20,7 @@
 	<pattern id="series">
 		<rule context="tei:series">
 			<assert test="tei:title" role="error">Obligatorisches Element "title" innerhalb von "series" fehlt [series_001]</assert>
-			<assert test="tei:biblScope[@type='vol' or @type='part']" role="error">Obligatorisches Element "biblScope" mit @type="vol" oder @type="part" innerhalb von "series" fehlt [series_002]</assert>
+			<assert test="tei:biblScope[@unit='volume' or @unit='part']" role="error">Obligatorisches Element "biblScope" mit @unit="volume" oder @unit="part" innerhalb von "series" fehlt [series_002]</assert>
 		</rule>
 	</pattern>
 	<!--  -->
@@ -46,6 +46,11 @@
 			<report test="not(contains(.,'Edition') or contains(.,'Übersetzung') or contains(.,'Kommentar'))">Note gibt keine Bezeihung zum übergeordneten text an (Edition, Übersetzung oder Kommentar müssen als Wort enthalten sein) </report>
 		</rule>
 	</pattern>
+	<pattern id="biblStruct_note_type_access">
+		<rule context="tei:biblStruct/tei:note[@type='access']">
+			<report test="not(contains(.,'frei') or contains(.,'intern'))">Note enthält keine Angabe zur Zugänglichkeit (Werte: frei, intern)</report>
+		</rule>
+	</pattern>
 	<pattern id="biblStruct_note_type_item">
 		<rule context="tei:biblStruct/tei:note[@type='item']">
 			<report test="not(@subtype)">Subtype nicht ausgewiesen</report>
@@ -58,7 +63,7 @@
 	</rule></pattern>
 	<pattern id="biblStruct_note">
 		<rule context="tei:biblStruct">
-			<report test="count(tei:note[@type='notes']) > 1">Mehr als eine allgemeine Anmerkung</report>
+			<report test="count(tei:note[@type='notes'])> 1">Mehr als eine allgemeine Anmerkung</report>
 		</rule>	
 	</pattern>
 	<pattern id="biblStruct_note_type_notes">
@@ -83,7 +88,7 @@
 			<!-- FixMe:<idno type="short_title"> obligatorisch, max 60 Zeichen -->
 			<!-- <idno type="short_title"> auch in <analytic> obligatorisch? -->
 			<assert test="tei:title[@level='m']" role="error">Level des Titel nicht angegeben [biblStruct_book_monogr_003]</assert>
-			<assert test="tei:idno[@type='short_title']" role="error">Kurztitel nicht angegeben [biblStruct_book_monogr_004]</assert>
+			<assert test="tei:idno[@type='short_title'][. != '']" role="error">Kurztitel nicht angegeben [biblStruct_book_monogr_004]</assert>
 			<report test="count(tei:idno[@type='short_title']) > 1" role="warning">Mehr als 1 Kurztitel angegeben [biblStruct_book_monogr_005]</report>
 			<assert test="tei:editor or tei:author" role="error">Weder Autor noch Herausgeber angegeben [biblStruct_book_monogr_006]</assert>
 			<assert test="tei:edition" role="error">Enthält keine Informationen zur Auflage(edition) [biblStruct_book_monogr_007]</assert>
@@ -109,9 +114,9 @@
 			<assert test="tei:title[@type='main']" role="error">Haupttitel nicht angegeben [biblStruct_journalArticle_monogr_001]</assert>
 			<report test="count(tei:title[@type='main']) > 1" role="warning">Mehr als ein Haupttitel angegeben [biblStruct_journalArticle_monogr_002]</report>
 			<assert test="tei:title[@level='j']" role="error">Level des Titel nicht angegeben [biblStruct_journalArticle_monogr_003]</assert>
-			<assert test="tei:imprint/tei:biblScope[@type='vol']" role="error">Bandangabe fehlt [biblStruct_journalArticle_monogr_004]</assert>
+			<assert test="tei:imprint/tei:biblScope[@unit='volume']" role="error">Bandangabe fehlt [biblStruct_journalArticle_monogr_004]</assert>
 			<assert test="tei:imprint/tei:biblScope[@unit='issue']" role="error">Bandnummer fehlt[biblStruct_journalArticle_monogr_005]</assert>
-			<assert test="tei:imprint/tei:biblScope[@type='pp']" role="error">Seitenangabe fehlt [biblStruct_journalArticle_monogr_006]</assert>
+			<assert test="tei:imprint/tei:biblScope[@unit='page']" role="error">Seitenangabe fehlt [biblStruct_journalArticle_monogr_006]</assert>
 			<assert test="tei:imprint/tei:date" role="error">Erscheinungsjahr fehlt [biblStruct_journalArticle_monogr_007]</assert>
 		</rule>
 	</pattern>
@@ -120,7 +125,7 @@
 			<assert test="tei:title[@type='main']" role="error">Haupttitel nicht angegeben [biblStruct_journalArticle_analytic_001]</assert>
 			<report test="count(tei:title[@type='main']) > 1" role="warning">Mehr als ein Haupttitel angegeben [biblStruct_journalArticle_analytic_002]</report>
 			<!-- <idno type="short_title"> auch in <analytic> obligatorisch? -->
-			<assert test="tei:idno[@type='short_title']" role="error">Kurztitel nicht angegeben [biblStruct_journalArticle_monogr_003]</assert>
+			<assert test="tei:idno[@type='short_title']" role="error">Kurztitel nicht angegeben [biblStruct_journalArticle_analytic_003]</assert>
 			<assert test="tei:title[@level='a']" role="error">Level des Titel nicht angegeben [biblStruct_journalArticle_analytic_004]</assert>
 			<assert test="tei:author" role="error">Autor fehlt [biblStruct_journalArticle_analytic_004]</assert>
 		</rule></pattern>
@@ -146,8 +151,8 @@
 			<assert test="tei:imprint/tei:pubPlace" role="error">Erscheinungsort fehlt (pubPlace) [biblStruct_bookSection_monogr_007]</assert>
 			<assert test="tei:imprint/tei:publisher" role="error">Herausgeber fehlt (publisher) [biblStruct_bookSection_monogr_008]</assert>
 			<assert test="tei:imprint/tei:date" role="error">Erscheinungsjahr fehlt (date) [biblStruct_bookSection_monogr_009]</assert>
-			<assert test="tei:imprint/tei:biblScope[@type='pp']" role="error">Seitenangabe fehlt [biblStruct_bookSection_monogr_010]</assert>
-			<assert test="tei:imprint/tei:biblScope[@type='chap']" role="error">Kapitelangabe fehlt[biblStruct_bookSection_monogr_011]</assert>
+			<assert test="tei:imprint/tei:biblScope[@unit='page']" role="error">Seitenangabe fehlt [biblStruct_bookSection_monogr_010]</assert>
+			<assert test="tei:imprint/tei:biblScope[@unit='chapter']" role="error">Kapitelangabe fehlt[biblStruct_bookSection_monogr_011]</assert>
 		</rule>
 	</pattern>
 	<pattern id="biblStruct_bookSection_analytic">
@@ -174,8 +179,7 @@
 			<assert test="tei:title[@level='m']" role="error">Level des Titel nicht angegeben [biblStruct_webPublication_monogr_003]</assert>
 			<!-- <idno type="short_title"> auch in <analytic> obligatorisch? -->
 			<assert test="tei:idno[@type='URL']" role="error">URL nicht angegeben [biblStruct_webPublication_monogr_005]</assert>
-			<assert test="tei:imprint/tei:date[@type='posting']" role="error">Erstellungsdatum der Webressource [biblStruct_webPublication_monogr_006]</assert>
-			<assert test="tei:imprint/tei:date[@type='access']" role="error">Datum des letzten Zugriffs auf die Webressource fehlt [biblStruct_webPublication_monogr_007]</assert>
+						<assert test="tei:imprint/tei:date[@type='access']" role="error">Datum des letzten Zugriffs auf die Webressource fehlt [biblStruct_webPublication_monogr_007]</assert>
 			</rule>
 	</pattern>
 	<!--Wenn analytic vorhanden-->
@@ -185,6 +189,7 @@
 			<report test="count(tei:title[@type='main']) > 1" role="warning">Mehr als ein Haupttitel angegeben [biblStruct_webPublication_analytic_002]</report>
 			<assert test="tei:idno[@type='short_title']" role="error">Kurztitel nicht angegeben [biblStruct_webPublication_analytic_003]</assert>
 			<assert test="tei:title[@level='a']" role="warning">Level des Titel nicht angegeben [biblStruct_webPublication_analytic_004]</assert>
-			<assert test="tei:author" role="warning">Autor fehlt [biblStruct_webPublication_analytic_004]</assert>
+			<assert test="tei:author" role="warning">Autor fehlt [biblStruct_webPublication_analytic_005]</assert>
+			<assert test="tei:imprint/tei:date[@type='posting']" role="error">Erstellungsdatum der Webressource [biblStruct_webPublication_analytic_006]</assert>
 		</rule></pattern>-->
 	</schema>

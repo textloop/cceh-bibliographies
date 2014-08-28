@@ -51,35 +51,30 @@
 					<moduleRef key="tei" except=""/>
 					<moduleRef key="header" except="appInfo application authority availability biblFull cRefPattern calendar calendarDesc catDesc catRef category classCode classDecl correction creation distributor editionStmt editorialDecl encodingDesc extent funder geoDecl handNote hyphenation interpretation keywords langUsage language licence listChange listPrefixDef namespace normalization prefixDef principal projectDesc quotation refState refsDecl rendition samplingDecl scriptNote segmentation seriesStmt sponsor stdVals styleDefDecl tagUsage tagsDecl taxonomy textClass typeNote"/>
 					<moduleRef key="textstructure" except="argument back byline closer dateline div1 div2 div3 div4 div5 div6 div7 docAuthor docDate docEdition docImprint docTitle epigraph floatingText group imprimatur opener postscript salute signed titlePart trailer"/>
-					<moduleRef key="namesdates" except="addName affiliation age birth bloc climate country death district education event faith floruit genName geo geogFeat geogName langKnowledge langKnown listEvent listNym listOrg listPerson listPlace listRelation location nameLink nationality nym occupation offset org person personGrp place placeName population region relation relationGrp residence roleName settlement sex socecStatus state terrain trait"/>
+					<moduleRef key="namesdates" except="addName affiliation age birth bloc climate country death district education event faith floruit genName geo geogFeat geogName langKnowledge langKnown listEvent listNym listOrg listPerson listPlace listRelation nameLink nationality nym occupation offset org person personGrp place population region relation relationGrp residence roleName settlement sex socecStatus state terrain trait"/>
 					<moduleRef key="linking" except="ab alt altGrp anchor join joinGrp link linkGrp seg timeline when"/>
 					<moduleRef key="tagdocs" except=""/>
 					<!-- Elemente Modul core -->
 					<!-- biblScope -->
 					<elementSpec ident="biblScope" module="core" mode="change">
 						<attList>
-							<attDef ident="type" mode="change">
-								<valList type="closed" mode="replace">
-									<!-- FixMe: Wertliste erweitern -->
-									<valItem ident="vol">
-										<desc>Einzelband</desc>
-									</valItem>
-									<valItem ident="bookSection">
-										<desc>Abschnitte in Monographien</desc>
-									</valItem>
-									<valItem ident="pp">
-										<desc>Seitensequenz</desc>
-									</valItem>
-									<valItem ident="chap">
-										<desc>Kapitel</desc>
-									</valItem>
-								</valList>
-							</attDef>
 							<attDef ident="unit" mode="change">
 								<valList type="closed" mode="replace">
 									<!-- FixMe: Wertliste erweitern -->
+									<valItem ident="volume">
+										<desc>Einzelband</desc>
+									</valItem>
 									<valItem ident="issue">
-										<desc>Nummer der Ausgabe</desc>
+										<desc>Nummer</desc>
+									</valItem>
+									<valItem ident="page">
+										<desc>Seitensequenz</desc>
+									</valItem>
+									<valItem ident="chapter">
+										<desc>Kapitel</desc>
+									</valItem>
+									<valItem ident="part">
+										<desc>Teil</desc>
 									</valItem>
 								</valList>
 							</attDef>
@@ -163,16 +158,19 @@
 										<desc>allgemeine Anmerkungen - durch p-Elemente strukturiert - kann einmal vorkommen</desc>
 									</valItem>
 									<valItem ident="item">
-										<desc>Verfügbarkeit</desc>
+										<desc>Exemplar (gedruckt oder digital)</desc>
+									</valItem>
+									<valItem ident="access">
+										<desc>Zugänglichkeit</desc>
 									</valItem>
 								</valList>
 							</attDef>
 							<attDef ident="subtype" mode="change">
 								<valList type="closed" mode="replace">
 									<!-- FixMe: desc überarbeiten -->
-									<valItem ident="signature">
+									<valItem ident="print_version">
 										<!--näher erläutern!-->
-										<desc>Katalogeintrag</desc>
+										<desc>Druckexemplar</desc>
 									</valItem>
 									<valItem ident="digitized_version">
 										<desc>Digitalisat</desc>
@@ -321,16 +319,19 @@
 										<desc>Kurztitel obligatorisch (h&#xF6;chstens 60 Zeichen, inkl. Leerzeichen)</desc>
 									</valItem>
 									<valItem ident="ISBN">
-										<desc>Wenn bekannt</desc>
+										<desc>ISBN</desc>
 									</valItem>
 									<valItem ident="ISSN">
-										<desc>Wenn bekannt</desc>
+										<desc>ISSN</desc>
 									</valItem>
 									<valItem ident="DOI">
-										<desc>Wenn bekannt</desc>
+										<desc>DOI</desc>
 									</valItem>
 									<valItem ident="URL">
-										<desc>Wenn bekannt</desc>
+										<desc>URL</desc>
+									</valItem>
+									<valItem ident="signature">
+										<desc>Signatur</desc>
 									</valItem>
 								</valList>
 							</attDef>

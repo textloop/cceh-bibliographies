@@ -50,11 +50,11 @@
                <!-- Zugehörigkeit zu einer Reihe bei unserem type "book" optional -->
                <series>
                   <title level="s" type="main">Pap. Colon. Theol.</title>
-                  <biblScope type="vol">1</biblScope>
+                  <biblScope unit="volume">1</biblScope>
                </series>
                <series>
                   <title level="s" type="main">Papyrologica Coloniensia</title>
-               	<biblScope type="vol">I</biblScope>
+               	<biblScope unit="volume">I</biblScope>
                </series>
          		<relatedItem type="translationOf" target="#papyri00002"/>
          		<note type="rel_text">Kommentar zu</note>
@@ -89,9 +89,9 @@
             		<idno type="ISSN">1613-0812 (Online)</idno><!-- optional -->
             		<idno type="ISSN">0071-9706 (Print)</idno>
             		<imprint>            			
-            			<biblScope type="vol">5</biblScope>
+            			<biblScope unit="volume">5</biblScope>
             			<biblScope unit="issue"/>
-            			<biblScope type="pp">101-134</biblScope>
+            			<biblScope unit="page">101-134</biblScope>
             			<date when="1971">1971</date>
             		</imprint>
             	</monogr>
