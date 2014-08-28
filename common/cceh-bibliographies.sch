@@ -4,11 +4,6 @@
 	<!--  -->
 	<!--  -->
 	<!-- Typenbergreifende Prüfungen -->
-	<pattern id="idno">
-		<rule context="tei:idno">
-			<assert test="@type" role="error">idno muss über @type verfügen [idno_001]</assert>
-		</rule>
-	</pattern>
 	<pattern id="relatedItem">
 		<rule context="tei:biblStruct">
 			<report test="count(tei:relatedItem[@type='translationOf']) > 1" role="warning">Mehr als ein relatedItem als "translationOf" angegeben [biblStruct_relatedItem_001]</report>
