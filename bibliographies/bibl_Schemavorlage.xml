@@ -27,6 +27,7 @@
                   <!--- Formatierungen im Titel mit <hi rend="italics|bold">-->
                	<!-- - optional können <rs type="place" key="ORTSNAME"></rs> im Titel vorkommen (Anwendungsfall Kapitularien-Projekt: Bei Einträgen, die 
                      Bibliothekskataloge (von alten Bibliotheken) sind, soll deren Ort erfasst werden) -->
+               	<title level="m" type="sub" xml:lang="de">Untertitel</title>
                	<idno type="short_title">Der Psalmenkommentar von Tura Quaternio IX</idno>
                	<idno type="ISBN">978-3-506-71431-2</idno>
                	<editor>
