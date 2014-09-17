@@ -43,7 +43,7 @@
 	<!-- notes in allen BiblStruct-Typen vorkommend-->
 	<pattern id="biblStruct_note_type_rel_text">
 		<rule context="tei:biblStruct/tei:note[@type='rel_text']">
-			<report test="not(contains(.,'Edition') or contains(.,'Übersetzung') or contains(.,'Kommentar'))">Note gibt keine Bezeihung zum übergeordneten text an (Edition, Übersetzung oder Kommentar müssen als Wort enthalten sein) </report>
+			<report test="not(contains(.,'Edition') or contains(.,'Übersetzung') or contains(.,'Kommentar') or contains(.,'Literatur') or contains(.,'Katalog') or contains(.,'Varia'))">Note gibt keine Bezeihung zum übergeordneten text an (Edition|Übersetzung|Kommentar|Literatur|Katalog|Varia müssen als Wort enthalten sein) </report>
 		</rule>
 	</pattern>
 	<pattern id="biblStruct_note_type_access">

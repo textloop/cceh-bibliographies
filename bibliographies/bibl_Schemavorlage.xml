@@ -25,6 +25,9 @@
                <monogr>
                	<title level="m" type="main" xml:lang="de">Der Psalmenkommentar von Tura Quaternio IX</title>
                   <!--- Formatierungen im Titel mit <hi rend="italics|bold">-->
+               	<!-- - optional können <rs type="place" key="ORTSNAME"></rs> im Titel vorkommen (Anwendungsfall Kapitularien-Projekt: Bei Einträgen, die 
+                     Bibliothekskataloge (von alten Bibliotheken) sind, soll deren Ort erfasst werden) -->
+               	<title level="m" type="sub" xml:lang="de">Untertitel</title>
                	<idno type="short_title">Der Psalmenkommentar von Tura Quaternio IX</idno>
                	<idno type="ISBN">978-3-506-71431-2</idno>
                	<editor>
@@ -60,12 +63,13 @@
          		<note type="rel_text">Kommentar zu</note>
          		<note type="tags"></note>
                <!-- Schlagwörter, à la DARE; kann einmal vorkommen; kommaseparierte Liste -->
-         		<note type="item" subtype="signature" target="http://www.ub.uni-koeln.de/usbportal?query=inst432:10111">B4/2006/Ur</note>
+         		<note type="item" subtype="print_version" target="http://www.ub.uni-koeln.de/usbportal?query=inst432:10111">B4/2006/Ur</note>
                <!--
                - Inhalt in Note erlaubt (z.B. Signatur, also freier Text)
                -->
          		<note type="abstract"><p></p></note>
                <note type="notes"><p>bla bla bla</p></note>
+         		<note type="access">frei | intern</note>
             </biblStruct>
             <biblStruct type="journalArticle" status="published" xml:id="kapxxx00001">
                <analytic>
@@ -138,8 +142,8 @@
                	<edition n="1">xxx</edition>
                   <imprint>
                      <pubPlace>Aldershot</pubPlace>
-                     <biblScope type="pp">219-235</biblScope>
-                     <biblScope type="chap"></biblScope>
+                  	<biblScope unit="page">219-235</biblScope>
+                  	<biblScope unit="chapter"></biblScope>
                      <publisher>Ashgate</publisher>
                      <date when="2009">2009</date>
                   </imprint>
@@ -193,7 +197,7 @@
                   <edition n="1.1"></edition><!-- editon optional, wenn da, dann: optional freier Text mit Versions-/Revisionsinformationen, @n Pflicht -->
                   <imprint>
                      <date type="posting" when="2014">2014</date>
-                  	<date type="access" when="1900"></date>
+                  	<date type="access" when="1900">30.06.2014</date>
                   </imprint>
                </monogr>
             </biblStruct>
