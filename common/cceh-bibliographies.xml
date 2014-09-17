@@ -216,6 +216,12 @@
 									<valItem ident="partOf">
 										<desc>Teil von</desc>
 									</valItem>
+									<valItem ident="continuedBy">
+										<desc>Fortgesetzt von</desc>
+									</valItem>
+									<valItem ident="continuationOf">
+										<desc>Fortsetzung von</desc>
+									</valItem>
 								</valList>
 							</attDef>
 						</attList>
