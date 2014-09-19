@@ -71,6 +71,26 @@
                <note type="notes"><p>bla bla bla</p></note>
          		<note type="access">frei | intern</note>
             </biblStruct>
+         	<biblStruct type="book" status="published" xml:id="kapxxx00003">
+         		<monogr>
+         			<title level="m" type="main" xml:lang="de">Die mittelalterlichen Handschriften des Klosters <rs type="place" key="Lorsch">Lorsch</rs></title>
+         			<idno type="short_title">Handschriften Lorsch</idno>
+         			<edition n="1" />
+         			<editor>
+         				<persName>
+         					<surname>[Unbekannt]</surname>
+         				</persName>
+         				<note type="role">herausgegeben, übersetzt und erläutert von</note>
+         				<!-- diese note ist optional -->
+         			</editor>
+         			<imprint>
+         				<date when="1964">1964</date>
+         				<pubPlace/>
+         				<publisher/>
+         			</imprint>
+         		</monogr>
+         		<note type="rel_text">Katalog</note>
+         	</biblStruct>
             <biblStruct type="journalArticle" status="published" xml:id="kapxxx00001">
                <analytic>
                   <title level="a" type="main">Paläographische Fragen deutscher Denkmäler der Karolingerzeit</title>
