@@ -63,7 +63,7 @@
 	</rule></pattern>
 	<pattern id="biblStruct_rs">
 		<rule context="tei:biblStruct/tei:monogr/tei:title/tei:rs">
-			<assert test="parent::*/parent::*/parent::*/tei:note">es fehlt rel-text obwohl ein ns type place da ist</assert>
+			<assert test="parent::*/parent::*/parent::*/tei:note[@type='rel_text']">Es fehlt note type='rel_text' obwohl ein ns type='place' im Titel vorhanden ist.</assert>
 		</rule>	
 	</pattern>
 	<pattern id="biblStruct_note_type_notes">
