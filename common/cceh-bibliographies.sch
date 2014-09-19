@@ -61,9 +61,9 @@
 	<rule context="tei:biblStruct/tei:note[@type='abstract']">
 		<assert test="tei:p">Strukturierende p-Elemente fehlen</assert>
 	</rule></pattern>
-	<pattern id="biblStruct_note">
-		<rule context="tei:biblStruct">
-			<report test="count(tei:note[@type='notes'])> 1">Mehr als eine allgemeine Anmerkung</report>
+	<pattern id="biblStruct_rs">
+		<rule context="tei:biblStruct/tei:monogr/tei:title/tei:rs">
+			<assert test="parent::*/parent::*/parent::*/tei:note">es fehlt rel-text obwohl ein ns type place da ist</assert>
 		</rule>	
 	</pattern>
 	<pattern id="biblStruct_note_type_notes">
@@ -71,7 +71,11 @@
 			<assert test="tei:p">Strukturierende p-Elemente fehlen</assert>
 			</rule>	
 	</pattern>
-
+	<pattern id="biblStruct_note">
+		<rule context="tei:biblStruct">
+			<report test="count(tei:note[@type='notes'])> 1">Mehr als eine allgemeine Anmerkung</report>
+		</rule>	
+	</pattern>
 	<!--  -->
 	<!--  -->
 	<!-- Typ book -->
