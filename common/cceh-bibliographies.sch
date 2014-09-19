@@ -91,7 +91,7 @@
 			<assert test="tei:editor or tei:author" role="error">Weder Autor noch Herausgeber angegeben [biblStruct_book_monogr_006]</assert>
 			<assert test="tei:edition" role="error">Enthält keine Informationen zur Auflage(edition) [biblStruct_book_monogr_007]</assert>
 			<assert test="tei:imprint/tei:pubPlace" role="error">Erscheinungsort fehlt (pubPlace) [biblStruct_book_monogr_008]</assert>
-			<assert test="tei:imprint/tei:publisher" role="error">Herausgeber fehlt (publisher) [biblStruct_book_monogr_009]</assert>
+			<assert test="tei:imprint/tei:publisher" role="error">Verlag fehlt (publisher) [biblStruct_book_monogr_009]</assert>
 			<assert test="tei:imprint/tei:date" role="error">Erscheinungsjahr fehlt (date) [biblStruct_book_monogr_010]</assert>
 			<report test="tei:editor/tei:note[not(@type='role')]" role="warning">Note enthält andere Information als @role [biblStruct_book_monogr_011]</report>
 			<report test="tei:author/tei:note[not(@type='role')]" role="warning">Note enthält andere Information als @role [biblStruct_book_monogr_012]</report>
