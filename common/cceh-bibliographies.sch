@@ -38,6 +38,13 @@
 			<assert test="tei:surname[. != '']" role="error">Kein Nachname angegeben</assert>
 		</rule>
 	</pattern>
+	<!-- Prüfungen in verstreuten orgName-Elementen -->
+	<pattern id="orgName">
+		<rule context="tei:orgName">
+			<assert test=". != ''" role="error">Element orgName darf nicht leer sein</assert>
+		</rule>
+	</pattern>
+	<!-- Prüfungen in verstreuten date-Elementen -->
 	<pattern id="date">
 		<rule context="tei:date">
 			<assert test="(@when and not(@from) and not(@to)) or (@from and @to)" role="error">Date muss entweder @when oder @from und @to haben</assert>
