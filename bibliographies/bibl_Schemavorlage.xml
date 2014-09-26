@@ -18,15 +18,12 @@
   <text>
       <body>
          <listBibl>
-         	<!-- Schema für bestimmten Typen: gelöst via schematron-->
          	<!-- wohin übergreifende Prüfung value darf nie leer sein? -->
          	<!-- wohin übergreifende Prüfung element darf nie leer sein? -->
          	<biblStruct type="book" status="published" xml:id="papyri00001">
                <monogr>
                	<title level="m" type="main" xml:lang="de">Der Psalmenkommentar von Tura Quaternio IX</title>
                   <!--- Formatierungen im Titel mit <hi rend="italics|bold">-->
-               	<!-- - optional können <rs type="place" key="ORTSNAME"></rs> im Titel vorkommen (Anwendungsfall Kapitularien-Projekt: Bei Einträgen, die 
-                     Bibliothekskataloge (von alten Bibliotheken) sind, soll deren Ort erfasst werden) -->
                	<title level="m" type="sub" xml:lang="de">Untertitel</title>
                	<idno type="short_title">Der Psalmenkommentar von Tura Quaternio IX</idno>
                	<idno type="ISBN">978-3-506-71431-2</idno>
@@ -36,7 +33,6 @@
                			<surname>Kehl</surname>
                		</persName>
                		<note type="role">herausgegeben, übersetzt und erläutert von</note>
-               		<!-- diese note ist optional -->
                	</editor>
                	<textLang mainLang="de" otherLangs="fr en" />
                   <edition n="1">xxx</edition>
@@ -47,10 +43,8 @@
                      <publisher>Westdeutscher Verlag</publisher>
                      <date when="1964">1964</date>
                      <note type="reprint">korrigierter Nachdruck 1987 | Nachdruck zum Erstdruck von ... </note>
-                     <!-- optional, freier Text!-->
                   </imprint>
                </monogr>
-               <!-- Zugehörigkeit zu einer Reihe bei unserem type "book" optional -->
                <series>
                   <title level="s" type="main">Pap. Colon. Theol.</title>
                   <biblScope unit="volume">1</biblScope>
@@ -81,7 +75,6 @@
          					<surname>[Unbekannt]</surname>
          				</persName>
          				<note type="role">herausgegeben, übersetzt und erläutert von</note>
-         				<!-- diese note ist optional -->
          			</editor>
          			<imprint>
          				<date when="1964">1964</date>
