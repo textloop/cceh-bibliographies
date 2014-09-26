@@ -55,8 +55,8 @@
                      <pubPlace>Köln</pubPlace><!-- obligatorisch, freier Text, wiederholbar -->
                      <pubPlace xml:lang="en">Cologne</pubPlace><!-- pubPlace optional mit @xml:lang -->
                      <pubPlace>Opladen</pubPlace>
-                     <publisher>Westdeutscher Verlag</publisher><!-- obligatorisch, freier Text, kann leer bleiben -->
-                     <date when="1964">1964</date><!-- obligatorisch, @when Pflicht, Jahreszahl -->
+                     <publisher>Westdeutscher Verlag</publisher><!-- optional, freier Text, kann leer bleiben -->
+                     <date when="1964">1964</date><!-- obligatorisch, @when oder @from/@to Pflicht, Jahreszahl -->
                      <note type="reprint">korrigierter Nachdruck 1987 | Nachdruck zum Erstdruck von ... </note>
                      <!-- optional, wenn dann mit @type=reprint, freier Text, erläutern!, wenn keine Infos, dann frei lassen -->
                   </imprint>

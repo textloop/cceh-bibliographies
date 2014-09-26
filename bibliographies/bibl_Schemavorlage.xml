@@ -113,8 +113,8 @@
             		<idno type="ISSN">1613-0812 (Online)</idno><!-- optional -->
             		<idno type="ISSN">0071-9706 (Print)</idno>
             		<imprint>            			
-            			<biblScope unit="volume">5</biblScope>
-            			<biblScope unit="issue"/>
+            			<biblScope unit="volume">1</biblScope>
+            			<biblScope unit="issue">2</biblScope>
             			<biblScope unit="page">101-134</biblScope>
             			<date when="1971">1971</date>
             		</imprint>
