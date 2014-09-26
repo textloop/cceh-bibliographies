@@ -3,7 +3,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2014-09-19T10:15:30Z. 
+Schema generated from ODD source 2014-09-26T11:07:12Z. 
 Edition: Version 2.7.0. Last updated on
 	16th September 2014, revision 13036
 Edition Location: http://www.tei-c.org/Vault/P5/Version 2.7.0/
@@ -1868,30 +1868,9 @@ The element indicated by @spanTo (<sch:value-of select="@spanTo"/>) must follow 
             </choice>
          </zeroOrMore>
          <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.datable.attribute.calendar"/>
-         <ref name="tei_att.datable.attribute.period"/>
-         <ref name="tei_att.datable.w3c.attribute.notBefore"/>
-         <ref name="tei_att.datable.w3c.attribute.notAfter"/>
-         <ref name="tei_att.datable.w3c.attribute.from"/>
-         <ref name="tei_att.datable.w3c.attribute.to"/>
-         <ref name="tei_att.datable.iso.attribute.when-iso"/>
-         <ref name="tei_att.datable.iso.attribute.notBefore-iso"/>
-         <ref name="tei_att.datable.iso.attribute.notAfter-iso"/>
-         <ref name="tei_att.datable.iso.attribute.from-iso"/>
-         <ref name="tei_att.datable.iso.attribute.to-iso"/>
-         <ref name="tei_att.datable.custom.attribute.when-custom"/>
-         <ref name="tei_att.datable.custom.attribute.notBefore-custom"/>
-         <ref name="tei_att.datable.custom.attribute.notAfter-custom"/>
-         <ref name="tei_att.datable.custom.attribute.from-custom"/>
-         <ref name="tei_att.datable.custom.attribute.to-custom"/>
-         <ref name="tei_att.datable.custom.attribute.datingPoint"/>
-         <ref name="tei_att.datable.custom.attribute.datingMethod"/>
+         <ref name="tei_att.datable.attributes"/>
          <ref name="tei_att.editLike.attributes"/>
          <ref name="tei_att.typed.attribute.subtype"/>
-         <attribute name="when">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies the value of the date or time in a standard form, e.g. yyyy-mm-dd.</a:documentation>
-            <ref name="tei_data.temporal.w3c"/>
-         </attribute>
          <optional>
             <attribute name="type">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the element in some sense, using any convenient classification scheme or typology.</a:documentation>

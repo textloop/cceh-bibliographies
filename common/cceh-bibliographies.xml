@@ -118,7 +118,6 @@
 					<elementSpec ident="date" module="core" mode="change">
 						<attList>
 							<!--Hier brauchen wir @type! Problem siehe imprint/monogr in webPublication --> 
-							<attDef ident="when" mode="change" usage="req"/>
 							<attDef ident="type" mode="change">
 								<valList type="closed" mode="replace">
 									<valItem ident="posting">
