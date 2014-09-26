@@ -18,6 +18,7 @@
 		</fileDesc>
 		<revisionDesc>
 			<change>Init MG: type article (2014-05-26)</change>
+			<change>MG+UH: included all types (2014-09-26)</change>
 		</revisionDesc>
 	</teiHeader>
 	<text>
@@ -33,7 +34,6 @@
 			<div>
 				<p>CCeH Customization&#xD; for bibliographies 
 					starts with modules tei, core, textstructure, header, namesdates and linking. (ROMA: "Build up").</p>
-				<p>First shot: shaped for type article</p>
 			</div>
 		</front>
 		<body>
@@ -118,6 +118,7 @@
 					<elementSpec ident="date" module="core" mode="change">
 						<attList>
 							<!--Hier brauchen wir @type! Problem siehe imprint/monogr in webPublication --> 
+							<attDef ident="when" mode="change" usage="req"/>
 							<attDef ident="type" mode="change">
 								<valList type="closed" mode="replace">
 									<valItem ident="posting">
