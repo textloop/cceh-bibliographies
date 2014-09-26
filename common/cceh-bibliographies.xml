@@ -287,6 +287,13 @@
 									</valItem>
 								</valList>
 							</attDef>
+							<attDef ident="subtype" mode="change">
+								<valList type="closed" mode="replace">
+									<valItem ident="alt">
+										<desc>Alternativer Titel (ergänzend zu Haupt oder Untertitel)</desc>
+									</valItem>
+								</valList>
+							</attDef>
 							<attDef ident="xml:lang" mode="change">
 								<valList type="open" mode="replace">
 									<!-- FixMe: Weitere Sprachen vorgeben -->
